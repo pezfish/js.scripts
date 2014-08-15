@@ -35,3 +35,16 @@ function loadSocialMediaButtons(sites){
 
 /*-- min --*/
 function loadSocialMediaButtons(c){c=c.split(",");for(var f={pinterest:function(){var a=document.getElementsByTagName("SCRIPT")[0],b=document.createElement("SCRIPT");b.type="text/javascript";b.async=!0;b.src="//assets.pinterest.com/js/pinit.js";a.parentNode.insertBefore(b,a)},facebook:function(){if(window.FB)FB.XFBML.parse();else{var a=document,b=a.getElementsByTagName("script")[0];a.getElementById("facebook-jssdk")||(a=a.createElement("script"),a.id="facebook-jssdk",a.src="//connect.facebook.net/en_US/all.js#xfbml=1", b.parentNode.insertBefore(a,b))}},twitter:function(){if(window.twttr&&"object"===typeof twttr.widgets)twttr.widgets.load();else{var a,b=document.getElementsByTagName("script")[0];document.getElementById("twitter-wjs")||(a=document.createElement("script"),a.id="twitter-wjs",a.src="//platform.twitter.com/widgets.js",b.parentNode.insertBefore(a,b))}},googleplus:function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://apis.google.com/js/plusone.js";var b=document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(a,b)}},d=0;d<c.length;d++){var e=c[d].replace(/\s/g,"");"undefined"!==typeof f[e]?f[e].apply():console.error("Script does not exist for "+e)}};
+
+
+/*
+facebook
+<div class="fb-like" data-href="#" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+
+pinterest
+<a href="//pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" ><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+
+twitter
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="#">Tweet</a>
+
+*/
